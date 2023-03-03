@@ -44,6 +44,9 @@ streamlit.dataframe(fruityvice_normalized)
 # streamlit.text("Hello from Snowflake:")
 # streamlit.text(my_data_row)
 # ------------------------------------------------------
+#do not run anything past here while we troubleshoot
+streamlit.stop()
+# ------------------------------------------------------
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("select * from PC_RIVERY_DB.PUBLIC.FRUIT_LOAD_LIST")
